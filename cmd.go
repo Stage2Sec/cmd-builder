@@ -157,6 +157,15 @@ func (cmdBuilder *CmdBuilder) Interactive() *CmdBuilder {
 	return cmdBuilder
 }
 
+// NonInteractive sets the stdin, stdout, and stderr to nil which effectively
+// sets them to os.DevNull
+func (cmdBuilder *CmdBuilder) NonInteractive() *CmdBuilder {
+	cmdBuilder.cmd.Stderr = nil
+	cmdBuilder.cmd.Stdin = nil
+	cmdBuilder.cmd.Stdout = nil
+	return cmdBuilder
+}
+
 // Env specifies the environment of the process.
 // Each entry is of the form "key=value".
 // If Env is nil, the new process uses the current process's
