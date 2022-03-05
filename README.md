@@ -11,7 +11,9 @@ go get github.com/NoF0rte/cmd-builder@latest
 Here are some usage examples. (Explanations will come later. Didn't have time to create detailed documentation at the time)
 
 ```go
-import "github.com/NoF0rte/cmd-builder"
+import (
+	builder "github.com/NoF0rte/cmd-builder"
+)
 
 // Example 1
 output, err := builder.
