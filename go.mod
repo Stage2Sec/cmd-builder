@@ -1,3 +1,3 @@
-module github.com/NoF0rte/cmd-builder
+module github.com/Stage2Sec/cmd-builder
 
 go 1.17
